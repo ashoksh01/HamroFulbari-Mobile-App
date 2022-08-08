@@ -1,0 +1,87 @@
+
+.carcontainer {
+  /* position: relative; */
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carcarousel {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carcarousel__face {
+  position:absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(#509aa9d6);
+  display: flex;
+}
+
+.carspan {
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:black;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.carcarousel__face:nth-child(1) {
+  background-image: url(../images/slider1.png);
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(2) {
+  background-image: url(../images/slider2.png);
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(3) {
+  background-image: url(../images/f2.jpg);
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(4) {
+  background-image: url(../images/i1.jpg);
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(5) {
+  background-image: url(../images/i2.jpg);
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(6) {
+  background-image: url(../images/reg.png);
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(7) {
+  background-image: url(../images/i11.jpg);
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(8) {
+  background-image: url(../images/i12.jpg);
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carcarousel__face:nth-child(9) {
+  background-image: url(../images/i13.jpg);
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.ccontainer{
+  padding-top: 55vh;
+}

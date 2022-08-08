@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+.loginbody {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+.loginh1 {
+	font-weight: bold;
+	margin: 0;
+	color: black;
+}
+.loginal {
+	font-weight: bold;
+	margin: 0;
+	color: green;
+	font-weight: 70px;
+
+}
+.loginal :hover {
+	color: rgb(12, 11, 11);
+	font-weight: 70px;
+}
+
+.loginh2 {
+	text-align: center;
+	
+}
+
+.loginp {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+.loginpl{
+	font-size: 16px;
+	color: #333;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+	font-weight: bold;
+	margin: 0;
+
+}
+
+.loginspan {
+	font-size: 12px;
+}
+
+.logina {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.loginbutton {
+	border-radius: 20px;
+	border: 1px solid rgb(61, 159, 61);
+	background-color: rgb(51, 166, 51);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.loginbutton:active {
+	transform: scale(0.95);
+}
+
+.loginbutton:focus {
+	outline: none;
+}
+
+.loginbutton .loginghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.loginform {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.logininput {
+	background-color: #eee;
+	border: none;
+	padding: 8px 30px;
+	margin: 5px 0;
+	width: 100%;
+}
+
+.logincontainer {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	
+}
+
+.loginform-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.loginsign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.logincontainer.right-panel-active .loginsign-in-container {
+	transform: translateX(100%);
+}
+
+.loginsign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.logincontainer.right-panel-active .loginsign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.loginoverlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.logincontainer.right-panel-active .loginoverlay-container{
+	transform: translateX(-100%);
+}
+
+.loginoverlay {
+	background: #b3b3b8;
+	background: -webkit-linear-gradient(to right, #bcbbc8, #adacbd);
+	background: linear-gradient(to right, #b5b4c2, #bbbbc3);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.logincontainer.right-panel-active .loginoverlay {
+  	transform: translateX(50%);
+}
+
+.loginoverlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.loginoverlay-left {
+	transform: translateX(-20%);
+}
+
+.logincontainer.right-panel-active .loginoverlay-left {
+	transform: translateX(0);
+}
+
+.loginoverlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.logincontainer.right-panel-active .loginoverlay-right {
+	transform: translateX(20%);
+}
+
+.loginsocial-container {
+	margin: 20px 0;
+}
+
+.loginsocial-container .logina {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+
+
